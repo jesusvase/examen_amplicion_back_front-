@@ -1,0 +1,58 @@
+<h2>Student Add (With Validations) </h2>
+<form [formGroup]="studentForm" (ngSubmit)="addStudent()" #formDir="ngForm">
+    <div class="form-group row">
+    
+        <label class=" control-label col-md-12" for="name">Name:</label>
+        <div class="col-md-4">
+          <input class="form-control" type="text" formControlName="name">
+        </div>
+        <span class="text-danger" *ngIf="studentForm.hasError('required', 'name') && formDir.submitted">
+          Name is required.
+        </span>
+      </div>
+
+      <div class="form-group row">
+        <label class=" control-label col-md-12" for="email">email:</label>
+        <div class="col-md-4">
+          <input class="form-control" type="text" formControlName="email">
+        </div>
+        <span class="text-danger" *ngIf="studentForm.hasError('required', 'email') && formDir.submitted">
+            email is required.
+        </span>
+      </div>
+      
+<div class="form-group row">
+        <label class="control-label col-md-12" for="nationality">Nationality:</label>
+        <div class="col-md-4">
+          <input class="form-control" type="text" formControlName="nationality">
+        </div>
+        <span class="text-danger" *ngIf="studentForm.hasError('required', 'nationality') && formDir.submitted">
+          Nationality is required
+        </span>
+      </div>
+
+      <div class="form-group row">
+        <label class="control-label col-md-12" for="major">Major:</label>
+        <div class="col-md-4">
+          <input class="form-control" type="text" formControlName="major" data-val="true">
+        </div>
+        <span class="text-danger" *ngIf="studentForm.hasError('required', 'major') && formDir.submitted">
+          Major is required
+        </span>
+      </div>
+
+      <div class="form-group row">
+        <label class="control-label col-md-12" for="password">password:</label>
+        <div class="col-md-4">
+          <input class="form-control" type="text" formControlName="password" data-val="true">
+        </div>
+        <span class="text-danger" *ngIf="studentForm.hasError('required', 'password') && formDir.submitted">
+            password is required
+        </span>
+      </div>
+
+      <div class="form-group">
+        <button type="submit"  class="btn btn-default">Save</button>
+        <button class="btn" (click)="cancel()">Cancel</button>
+      </div>
+</form>

@@ -1,0 +1,40 @@
+<h2>Student list</h2>
+
+<div>
+  <!--<button (click)="">
+    Add
+  </button>-->
+
+  <button mat-stroked-button color="warn" (click)="add()">Basic</button>
+</div>
+
+<table class='table' *ngIf="Major">
+<thead>
+  <tr>
+    <th>Stuent Id</th>
+    <th>Name</th>
+    <th>Carrera</th>
+    <th>Nacionalidad
+    </th>
+   
+  </tr>
+
+</thead>
+<tbody>
+
+  <tr *ngFor="let m of Major; let i=index;">
+
+    <td>{{ m.id  }}</td>
+    <td>{{ m.name  }}</td>
+    <td> {{m.code}}  </td>
+    <td> {{m.numberofterms}}  </td>
+
+    <td>
+      <a [routerLink]="['/Major-detail/',m.id]"> Detail </a>
+      <a [routerLink]="['/Major-update/',m.id]"> Edit </a>
+      <a [routerLink]="" (click)="delete(m.id)"> Delete </a>
+  
+    </td>
+    </tr>
+
+</tbody>

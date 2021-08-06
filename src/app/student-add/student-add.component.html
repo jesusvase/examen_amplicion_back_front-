@@ -1,0 +1,66 @@
+
+     <body>
+      <h2>Student Add</h2>
+      <form class="form-group">
+          
+          <div class="form-group row">
+          <label class="control-label col-md-12">Name:</label>
+          <div class="col-md-4">
+              <input class="form-control"[(ngModel)]="studentData.name" name="name" placeholder="Name"/>
+          </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label col-md-12">email:</label>
+          <div class="col-md-4">
+              <input class="form-control"[(ngModel)]="studentData.email"  name="email" placeholder="Email"/>
+           </div>
+          </div>
+          <!--
+          <div class="form-group row">
+            <label class="control-label col-md-12">Nationality:</label>
+            
+          <div class="col-md-4">
+             <select class="form-control"[(ngModel)]="studentData.IdNationality" name="nationality">
+              <option value="" disabled selected>select an option</option>
+            </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label col-md-12">Major:</label>
+          <div class="col-md-4">
+              <select class="form-control" [(ngModel)]="studentData.IdMajor" name="major">
+                <option value="" disabled selected>select an option</option>
+              </select>
+      
+          </div>
+         </div>
+        -->
+        <div class="form-group row">
+          <label class="control-label col-md-12">Nationality:</label>
+        <div class="col-md-4">
+            <input class="form-control"[(ngModel)]="studentData.IdNationality"  name="nationality" placeholder="nationality"/>
+         </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="control-label col-md-12">Major:</label>
+        <div class="col-md-4">
+            <input class="form-control"[(ngModel)]="studentData.IdMajor"  name="major" placeholder="major"/>
+         </div>
+        </div>
+
+
+         <div class="form-group row">
+          <label class="control-label col-md-12">password:</label>
+        <div class="col-md-4">
+            <input class="form-control"[(ngModel)]="studentData.password"  name="password" placeholder="password"/>
+         </div>
+        </div>
+
+          <div class="form-group">
+            <button (click)="addStudent()" class="btn btn-default">Save</button>
+            <button class="btn" (click)="cancel()">Cancel</button>
+          </div>
+        
+      </form>
+      </body>

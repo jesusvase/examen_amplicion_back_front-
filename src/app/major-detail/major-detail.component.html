@@ -1,0 +1,11 @@
+<div *ngIf="Major" class="Major">
+    <h2>{{Major.name | uppercase}} Details</h2>
+    <div><span>Code: </span>{{Major.code}}</div>
+    <div><span>Numberofterms: </span>{{Major.numberofterms}}</div>
+    <div>
+      <button routerLink="/Major-update/{{Major.id}}">
+        Edit
+      </button>
+      <button (click)="cancel()" class="btn">Exit</button>
+    </div>
+</div>

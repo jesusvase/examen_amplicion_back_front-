@@ -1,0 +1,29 @@
+<body>
+    <h2>Major Add</h2>
+    <form class="form-group">
+        
+        <div class="form-group row">
+        <label class="control-label col-md-12">Name:</label>
+        <div class="col-md-4">
+            <input class="form-control"[(ngModel)]="majorData.name" name="name" placeholder="Name"/>
+        </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-md-12">Carrera:</label>
+        <div class="col-md-4">
+            <input class="form-control"[(ngModel)]="majorData.code"  name="code" placeholder="Carrera"/>
+         </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-md-12">Nacionalidad:</label>
+          <div class="col-md-4">
+              <input class="form-control"[(ngModel)]="majorData.numberofterms" name="numberofterms" placeholder="Nacionalidad"/>
+          </div>
+          </div>
+        <div class="form-group">
+          <button (click)="addMajor()" class="btn btn-default">Save</button>
+          <button class="btn" (click)="cancel()">Cancel</button>
+        </div>
+      
+    </form>
+    </body>

@@ -1,0 +1,40 @@
+<div>
+  <h2>Student Update</h2>
+  <div>
+    <div class="form-group row">
+    <label class="control-label col-md-12">Name:</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="studentData.name" placeholder="Name"/>
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="control-label col-md-12">Email:</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="studentData.email" placeholder="Email"/>
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="control-label col-md-12">Nationality:</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="studentData.IdNationality" placeholder="Nationality"/>
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="control-label col-md-12">Major:</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="studentData.IdMajor" placeholder="Major"/>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="control-label col-md-12">password:</label>
+  <div class="col-md-4">
+      <input [(ngModel)]="studentData.password"  placeholder="password"/>
+   </div>
+  </div>
+  </div>
+
+  <div class="form-group">
+  <button (click)="updateStudent()" class="btn btn-default">Update</button>
+  <button (click)="cancel()" class="btn">Cancel</button>
+</div>
+</div>
